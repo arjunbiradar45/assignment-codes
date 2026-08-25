@@ -1,0 +1,21 @@
+import pandas as pd
+
+df = pd.read_csv("student.csv")
+
+print("Student Data:")
+print(df)
+
+print("\nFirst 5 Students:")
+print(df.head())
+
+print("\nShape of DataFrame:")
+print(df.shape)
+
+print("\nColumn Names:")
+print(df.columns)
+
+print("\nAverage Marks:")
+print(df["Marks"].mean())
+
+print("\nStudents with Marks Above 85:")
+print(df[df["Marks"] > 85])
