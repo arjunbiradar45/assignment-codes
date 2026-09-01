@@ -1,0 +1,45 @@
+import pandas as pd
+
+df = pd.read_csv("student_database.csv")
+
+print("Dataset:")
+print(df)
+
+print("\nFirst 5 Rows:")
+print(df.head())
+
+print("\nLast 5 Rows:")
+print(df.tail())
+
+print("\nDataset Shape:")
+print(df.shape)
+
+print("\nColumn Names:")
+print(df.columns)
+
+print("\nData Types:")
+print(df.dtypes)
+
+print("\nDataset Information:")
+print(df.info())
+
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+print("\nDescriptive Statistics:")
+print(df.describe())
+
+print("\nMean:")
+print(df.mean(numeric_only=True))
+
+print("\nMedian:")
+print(df.median(numeric_only=True))
+
+print("\nStandard Deviation:")
+print(df.std(numeric_only=True))
+
+print("\nMinimum Values:")
+print(df.min(numeric_only=True))
+
+print("\nMaximum Values:")
+print(df.max(numeric_only=True))
