@@ -1,0 +1,52 @@
+import numpy as np
+
+data = np.array([
+    [85, 90, 78],
+    [88, 92, 80],
+    [75, 85, 70],
+    [90, 95, 88]
+])
+
+print("Engineering Data:")
+print(data)
+
+print("\nMatrix Addition:")
+matrix1 = np.array([[1, 2], [3, 4]])
+matrix2 = np.array([[5, 6], [7, 8]])
+print(matrix1 + matrix2)
+
+print("\nMatrix Multiplication:")
+print(np.dot(matrix1, matrix2))
+
+print("\nTranspose of Matrix:")
+print(data.T)
+
+print("\nMean:")
+print(np.mean(data))
+
+print("\nMedian:")
+print(np.median(data))
+
+print("\nStandard Deviation:")
+print(np.std(data))
+
+print("\nVariance:")
+print(np.var(data))
+
+print("\nMaximum Value:")
+print(np.max(data))
+
+print("\nMinimum Value:")
+print(np.min(data))
+
+print("\nColumn-wise Mean:")
+print(np.mean(data, axis=0))
+
+print("\nRow-wise Mean:")
+print(np.mean(data, axis=1))
+
+print("\nSum of All Values:")
+print(np.sum(data))
+
+print("\nCorrelation Matrix:")
+print(np.corrcoef(data, rowvar=False))
