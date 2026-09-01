@@ -1,0 +1,30 @@
+import pandas as pd
+
+df = pd.read_csv("student_database.csv")
+
+print("Original Data:")
+print(df)
+
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+df["Age"] = df["Age"].fillna(df["Age"].mean())
+df["Marks"] = df["Marks"].fillna(df["Marks"].mean())
+
+print("\nData after Handling Missing Values:")
+print(df)
+
+df = df.drop_duplicates()
+
+print("\nData after Removing Duplicates:")
+print(df)
+
+df["Marks"] = df["Marks"].astype(float)
+df["Age"] = df["Age"].astype(int)
+
+df = df.rename(columns={"Marks": "Score"})
+
+print("\nData after Modifying Structure:")
+print(df)
+
+df.to_csv("student_database.csv", index=False)
